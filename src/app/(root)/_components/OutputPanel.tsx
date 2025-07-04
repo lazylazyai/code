@@ -27,22 +27,22 @@ function OutputPanel() {
         <div className="absolute inset-0 holographic opacity-10" />
         
         {/* Gradient background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 via-purple-500/5 to-cyan-500/5 opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 via-indigo-500/5 to-purple-500/5 opacity-50" />
         
         <div className="relative">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
               <div className="relative energy-pulse">
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-xl blur opacity-40" />
-                <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-pink-600 to-cyan-600 shadow-glow-pink">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-xl blur opacity-40" />
+                <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-600 shadow-glow-pink">
                   <Terminal className="w-7 h-7 text-white" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-pink-400/20 to-cyan-400/20 rounded-xl animate-pulse" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-violet-400/20 to-indigo-400/20 rounded-xl animate-pulse" />
                 </div>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white flex items-center gap-2 neon-text">
-                  <Activity className="w-5 h-5 text-pink-400" />
+                <h2 className="text-xl font-bold text-white flex items-center gap-2 bg-gradient-to-r from-violet-400 to-indigo-400 text-transparent bg-clip-text">
+                  <Activity className="w-5 h-5 text-violet-400" />
                   Neural Output
                 </h2>
                 <p className="text-sm text-gray-400">
@@ -56,7 +56,7 @@ function OutputPanel() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleCopy}
-                className="flex items-center gap-2 px-4 py-2 glass-dark hover:bg-pink-500/20 rounded-xl transition-all duration-300 group cosmic-border"
+                className="flex items-center gap-2 px-4 py-2 glass-dark hover:bg-violet-500/20 rounded-xl transition-all duration-300 group cosmic-border"
               >
                 {isCopied ? (
                   <>
@@ -65,8 +65,8 @@ function OutputPanel() {
                   </>
                 ) : (
                   <>
-                    <Copy className="w-4 h-4 text-gray-400 group-hover:text-pink-400 transition-colors" />
-                    <span className="text-sm text-gray-400 group-hover:text-pink-400 transition-colors font-medium">Copy</span>
+                    <Copy className="w-4 h-4 text-gray-400 group-hover:text-violet-400 transition-colors" />
+                    <span className="text-sm text-gray-400 group-hover:text-violet-400 transition-colors font-medium">Copy</span>
                   </>
                 )}
               </motion.button>
@@ -75,9 +75,9 @@ function OutputPanel() {
 
           {/* Output container */}
           <div className="relative">
-            <div className="code-block border-pink-500/30">
+            <div className="code-block border-violet-500/30">
               {/* Console header */}
-              <div className="code-header bg-gradient-to-r from-pink-500/10 to-cyan-500/10">
+              <div className="code-header bg-gradient-to-r from-violet-500/10 to-indigo-500/10">
                 <div className="flex items-center gap-2">
                   <div className="flex gap-2">
                     <div className="w-3 h-3 rounded-full bg-red-500/80 shadow-glow"></div>
@@ -85,7 +85,7 @@ function OutputPanel() {
                     <div className="w-3 h-3 rounded-full bg-green-500/80 shadow-glow"></div>
                   </div>
                   <span className="text-sm text-gray-400 ml-3 flex items-center gap-2">
-                    <Cpu className="w-3 h-3 text-pink-400" />
+                    <Cpu className="w-3 h-3 text-violet-400" />
                     Quantum Console
                   </span>
                 </div>
@@ -103,8 +103,8 @@ function OutputPanel() {
               <div className="relative bg-black/60 p-6 h-[600px] overflow-auto font-mono text-sm">
                 {/* Cosmic overlay effects */}
                 <div className="absolute inset-0 pointer-events-none">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500/30 via-purple-500/30 to-cyan-500/30" />
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500/30 via-purple-500/30 to-pink-500/30" />
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-violet-500/30 via-indigo-500/30 to-purple-500/30" />
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500/30 via-indigo-500/30 to-violet-500/30" />
                 </div>
 
                 {isRunning ? (

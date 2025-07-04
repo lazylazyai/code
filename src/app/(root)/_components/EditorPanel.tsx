@@ -72,15 +72,15 @@ function EditorPanel() {
         <div className="absolute inset-0 holographic opacity-10" />
         
         {/* Gradient background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-teal-500/5 to-blue-500/5 opacity-50" />
         
         <div className="relative">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
               <div className="relative energy-pulse">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl blur opacity-40" />
-                <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-600 to-purple-600 shadow-glow">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl blur opacity-40" />
+                <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-600 shadow-glow">
                   <Image
                     src={`/${language}.png`}
                     alt="logo"
@@ -88,12 +88,12 @@ function EditorPanel() {
                     height={32}
                     className="relative z-10"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-purple-400/20 rounded-xl animate-pulse" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-teal-400/20 rounded-xl animate-pulse" />
                 </div>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white flex items-center gap-2 neon-text">
-                  <Cpu className="w-5 h-5 text-cyan-400" />
+                <h2 className="text-xl font-bold text-white flex items-center gap-2 bg-gradient-to-r from-emerald-400 to-teal-400 text-transparent bg-clip-text">
+                  <Cpu className="w-5 h-5 text-emerald-400" />
                   Quantum Editor
                 </h2>
                 <p className="text-sm text-gray-400">
@@ -113,9 +113,9 @@ function EditorPanel() {
                     max="24"
                     value={fontSize}
                     onChange={(e) => handleFontSizeChange(parseInt(e.target.value))}
-                    className="w-20 h-2 bg-gray-600 rounded-lg cursor-pointer accent-cyan-500"
+                    className="w-20 h-2 bg-gray-600 rounded-lg cursor-pointer accent-emerald-500"
                     style={{
-                      background: `linear-gradient(to right, #00d4ff 0%, #00d4ff ${((fontSize - 12) / 12) * 100}%, #374151 ${((fontSize - 12) / 12) * 100}%, #374151 100%)`
+                      background: `linear-gradient(to right, #10b981 0%, #10b981 ${((fontSize - 12) / 12) * 100}%, #374151 ${((fontSize - 12) / 12) * 100}%, #374151 100%)`
                     }}
                   />
                   <span className="text-sm font-medium text-gray-300 min-w-[2rem] text-center">
@@ -149,9 +149,9 @@ function EditorPanel() {
           </div>
 
           {/* Editor container */}
-          <div className="relative group rounded-2xl overflow-hidden border border-cyan-500/30 shadow-2xl">
+          <div className="relative group rounded-2xl overflow-hidden border border-emerald-500/30 shadow-2xl">
             {/* Editor header */}
-            <div className="code-header bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+            <div className="code-header bg-gradient-to-r from-emerald-500/10 to-teal-500/10">
               <div className="flex items-center gap-2">
                 <div className="flex gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500/80 shadow-glow"></div>
@@ -159,7 +159,7 @@ function EditorPanel() {
                   <div className="w-3 h-3 rounded-full bg-green-500/80 shadow-glow"></div>
                 </div>
                 <span className="text-sm text-gray-400 ml-3 flex items-center gap-2">
-                  <Zap className="w-3 h-3 text-cyan-400" />
+                  <Zap className="w-3 h-3 text-emerald-400" />
                   {LANGUAGE_CONFIG[language].label}
                 </span>
               </div>
@@ -210,8 +210,8 @@ function EditorPanel() {
                 />
                 {/* Cosmic overlay effects */}
                 <div className="absolute inset-0 pointer-events-none">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500/50 via-purple-500/50 to-pink-500/50 opacity-30" />
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500/50 via-purple-500/50 to-cyan-500/50 opacity-30" />
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500/50 via-teal-500/50 to-blue-500/50 opacity-30" />
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500/50 via-teal-500/50 to-emerald-500/50 opacity-30" />
                 </div>
               </div>
             )}
