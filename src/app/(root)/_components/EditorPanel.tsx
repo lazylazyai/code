@@ -5,7 +5,7 @@ import { useClerk } from '@clerk/nextjs';
 import React, { useEffect, useState } from 'react';
 import { defineMonacoThemes, LANGUAGE_CONFIG } from '../_constants';
 import Image from 'next/image';
-import { RotateCcw, Share, Type, Settings, Code, Play } from 'lucide-react';
+import { RotateCcwIcon, ShareIcon, TypeIcon, Settings, Cpu, Zap } from 'lucide-react';
 import { motion } from "framer-motion";
 import { Editor } from '@monaco-editor/react';
 import ShareSnippetDialog from './ShareSnippetDialog';
@@ -64,20 +64,23 @@ function EditorPanel() {
 
   return (
     <div className="relative slide-in-up">
-      <div className="glass rounded-3xl p-6 relative overflow-hidden card-hover modern-border">
-        {/* Grid pattern background */}
-        <div className="absolute inset-0 grid-pattern opacity-10" />
+      <div className="glass rounded-2xl p-6 relative overflow-hidden card-hover cosmic-border">
+        {/* Cosmic grid background */}
+        <div className="absolute inset-0 cosmic-grid opacity-20" />
+        
+        {/* Holographic effect */}
+        <div className="absolute inset-0 holographic opacity-10" />
         
         {/* Gradient background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-purple-500/5 to-pink-500/5 opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-50" />
         
         <div className="relative">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl blur opacity-30" />
-                <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 shadow-glow modern-border">
+              <div className="relative energy-pulse">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl blur opacity-40" />
+                <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-600 to-purple-600 shadow-glow">
                   <Image
                     src={`/${language}.png`}
                     alt="logo"
@@ -85,23 +88,24 @@ function EditorPanel() {
                     height={32}
                     className="relative z-10"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-purple-400/20 rounded-xl animate-pulse" />
                 </div>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                  <Code className="w-5 h-5 text-indigo-400" />
-                  Code Editor
+                <h2 className="text-xl font-bold text-white flex items-center gap-2 neon-text">
+                  <Cpu className="w-5 h-5 text-cyan-400" />
+                  Quantum Editor
                 </h2>
                 <p className="text-sm text-gray-400">
-                  Write and execute your code
+                  Neural-enhanced code compilation
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
               {/* Font size control */}
-              <div className="flex items-center gap-3 px-4 py-2 glass-dark rounded-xl modern-border">
-                <Type className="size-4 text-gray-400" />
+              <div className="flex items-center gap-3 px-4 py-2 glass-dark rounded-xl cosmic-border">
+                <TypeIcon className="size-4 text-gray-400" />
                 <div className="flex items-center gap-3">
                   <input
                     type="range"
@@ -109,9 +113,9 @@ function EditorPanel() {
                     max="24"
                     value={fontSize}
                     onChange={(e) => handleFontSizeChange(parseInt(e.target.value))}
-                    className="w-20 h-2 bg-gray-600 rounded-lg cursor-pointer accent-indigo-500"
+                    className="w-20 h-2 bg-gray-600 rounded-lg cursor-pointer accent-cyan-500"
                     style={{
-                      background: `linear-gradient(to right, #6366f1 0%, #6366f1 ${((fontSize - 12) / 12) * 100}%, #374151 ${((fontSize - 12) / 12) * 100}%, #374151 100%)`
+                      background: `linear-gradient(to right, #00d4ff 0%, #00d4ff ${((fontSize - 12) / 12) * 100}%, #374151 ${((fontSize - 12) / 12) * 100}%, #374151 100%)`
                     }}
                   />
                   <span className="text-sm font-medium text-gray-300 min-w-[2rem] text-center">
@@ -125,10 +129,10 @@ function EditorPanel() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleRefresh}
-                className="p-3 glass-dark hover:bg-red-500/20 rounded-xl transition-all duration-300 group modern-border"
+                className="p-3 glass-dark hover:bg-red-500/20 rounded-xl transition-all duration-300 group cosmic-border"
                 aria-label="Reset to default code"
               >
-                <RotateCcw className="size-4 text-gray-400 group-hover:text-red-400 transition-colors" />
+                <RotateCcwIcon className="size-4 text-gray-400 group-hover:text-red-400 transition-colors" />
               </motion.button>
 
               {/* Share button */}
@@ -136,18 +140,18 @@ function EditorPanel() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setIsShareDialogOpen(true)}
-                className="btn-primary flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white shadow-glow"
+                className="btn-primary flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white shadow-glow energy-pulse"
               >
-                <Share className="size-4" />
-                <span className="text-sm">Share Code</span>
+                <ShareIcon className="size-4" />
+                <span className="text-sm">Transmit Code</span>
               </motion.button>
             </div>
           </div>
 
           {/* Editor container */}
-          <div className="relative group rounded-2xl overflow-hidden border border-indigo-500/20 shadow-2xl modern-border">
+          <div className="relative group rounded-2xl overflow-hidden border border-cyan-500/30 shadow-2xl">
             {/* Editor header */}
-            <div className="code-header bg-gradient-to-r from-indigo-500/10 to-purple-500/10">
+            <div className="code-header bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
               <div className="flex items-center gap-2">
                 <div className="flex gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500/80 shadow-glow"></div>
@@ -155,7 +159,7 @@ function EditorPanel() {
                   <div className="w-3 h-3 rounded-full bg-green-500/80 shadow-glow"></div>
                 </div>
                 <span className="text-sm text-gray-400 ml-3 flex items-center gap-2">
-                  <Play className="w-3 h-3 text-indigo-400" />
+                  <Zap className="w-3 h-3 text-cyan-400" />
                   {LANGUAGE_CONFIG[language].label}
                 </span>
               </div>
@@ -204,10 +208,10 @@ function EditorPanel() {
                     },
                   }}
                 />
-                {/* Modern overlay effects */}
+                {/* Cosmic overlay effects */}
                 <div className="absolute inset-0 pointer-events-none">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500/50 via-purple-500/50 to-pink-500/50 opacity-30" />
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500/50 via-purple-500/50 to-indigo-500/50 opacity-30" />
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500/50 via-purple-500/50 to-pink-500/50 opacity-30" />
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500/50 via-purple-500/50 to-cyan-500/50 opacity-30" />
                 </div>
               </div>
             )}
