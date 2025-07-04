@@ -5,7 +5,7 @@ import { useMutation } from 'convex/react';
 import React from 'react'
 import { api } from '../../../../convex/_generated/api';
 import { motion } from "framer-motion";
-import { Loader2, Play, Zap, Rocket } from "lucide-react";
+import { Loader2, Zap, Rocket } from "lucide-react";
 
 function RunButton() {
   const { user } = useUser();

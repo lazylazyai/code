@@ -1,4 +1,4 @@
-import { Rocket, Atom } from "lucide-react";
+import { Atom } from "lucide-react";
 import Link from "next/link";
 
 function Footer() {

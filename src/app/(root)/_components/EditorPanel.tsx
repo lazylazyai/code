@@ -5,7 +5,7 @@ import { useClerk } from '@clerk/nextjs';
 import React, { useEffect, useState } from 'react';
 import { defineMonacoThemes, LANGUAGE_CONFIG } from '../_constants';
 import Image from 'next/image';
-import { RotateCcwIcon, ShareIcon, TypeIcon, Code2, Settings, Cpu, Zap } from 'lucide-react';
+import { RotateCcwIcon, ShareIcon, TypeIcon, Settings, Cpu, Zap } from 'lucide-react';
 import { motion } from "framer-motion";
 import { Editor } from '@monaco-editor/react';
 import ShareSnippetDialog from './ShareSnippetDialog';

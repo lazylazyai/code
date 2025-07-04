@@ -1,6 +1,6 @@
 "use client"
 import { useCodeEditorStore } from '@/store/useCodeEditorStore';
-import { AlertTriangle, CheckCircle, Clock, Copy, Terminal, Play, Zap, Cpu, Activity } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Copy, Terminal, Play, Zap, Cpu, Activity } from 'lucide-react';
 import React, { useState } from 'react'
 import RunningCodeSkeleton from './RunningCodeSkeleton';
 import { motion } from 'framer-motion';

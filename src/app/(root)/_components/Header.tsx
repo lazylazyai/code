@@ -2,7 +2,7 @@ import { currentUser } from "@clerk/nextjs/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../convex/_generated/api";
 import Link from "next/link";
-import { Rocket, Code2, Sparkles, Zap, Atom } from "lucide-react";
+import { Rocket, Code2, Sparkles, Atom } from "lucide-react";
 import { SignedIn } from "@clerk/nextjs";
 
 import RunButton from "./RunButton";

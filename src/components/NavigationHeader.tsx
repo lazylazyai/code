@@ -1,6 +1,6 @@
 import HeaderProfileBtn from '@/app/(root)/_components/HeaderProfileBtn';
 import { SignedOut } from '@clerk/nextjs';
-import { Rocket, Code2, Sparkles, Atom } from 'lucide-react';
+import { Rocket, Code2, Sparkles} from 'lucide-react';
 import Link from 'next/link';
 import React from 'react'
 
